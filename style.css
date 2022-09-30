@@ -1,0 +1,74 @@
+/* Page resets and style starts here */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Page resets and style ends here */
+
+
+
+/* Hamburger component starts here */
+
+.hamburger {
+    width: 150px;
+    height: 150px;
+    background: #215ff6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+
+.bars {
+    background: #fff;
+    height: 3px;
+    width: 60%;
+    position: relative;
+}
+
+.bars::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    transform: translateY(-20px);
+}
+
+.bars::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    transform: translateY(20px);
+
+}
+
+.crossburger .bars {
+    background: transparent;
+}
+
+
+.crossburger .bars::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.crossburger .bars::after {
+    transform: translateY(0px) rotate(-45deg);
+
+}
+
+/* Hamburger component ends here */
